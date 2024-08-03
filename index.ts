@@ -17,7 +17,7 @@ app.use(cors({
 const PORT = process.env.PORT || 5000;
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, './client')));
+app.use(express.static(path.join(__dirname, './dist/client')));
 
 // Define Routes here
 app.use('/api/users', require('./routes/users'))
@@ -30,7 +30,7 @@ app.use('/api/books', require('./routes/books'))
 
 // All other routes should serve the React app
 app.get('*', (req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, './client', 'index.html'));
+    res.sendFile(path.join(__dirname, './dist/client', 'index.html'));
 });
 
 

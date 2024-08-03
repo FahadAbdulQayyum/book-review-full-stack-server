@@ -5,7 +5,14 @@
         "src": "index.ts",
         "use": "@vercel/node",
         "config":{
-          "includeFiles": ["dist/client/**"]
+          "includeFiles": ["dist/client/**", "dist/**/*.js", "dist/**/*.json"]
+        }
+      },
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist/client"
         }
       }
     ],
