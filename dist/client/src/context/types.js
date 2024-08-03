@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CLEAR_ERRORS = exports.LOGOUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.SIGNUP_FAIL = exports.SIGNUP_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = exports.CLEAR_FILTER = exports.BOOK_ERROR = exports.CLEAR_BOOKS = exports.FILTER_BOOK = exports.UPDATE_BOOK = exports.CLEAR_CURRENT = exports.SET_CURRENT = exports.DELETE_BOOK = exports.ADD_BOOK = exports.GET_BOOKS = exports.API = void 0;
+// export const API = 'https://book-review-platform-server.vercel.app'
+exports.API = 'http://localhost:5000';
+exports.GET_BOOKS = 'GET_BOOKS';
+exports.ADD_BOOK = 'ADD_BOOK';
+exports.DELETE_BOOK = 'DELETE_BOOK';
+exports.SET_CURRENT = 'SET_CURRENT';
+exports.CLEAR_CURRENT = 'CLEAR_CURRENT';
+exports.UPDATE_BOOK = 'UPDATE_BOOK';
+exports.FILTER_BOOK = 'FILTER_BOOK';
+exports.CLEAR_BOOKS = 'CLEAR_BOOKS';
+exports.BOOK_ERROR = 'BOOK_ERROR';
+exports.CLEAR_FILTER = 'CLEAR_FILTER';
+exports.SET_ALERT = 'SET_ALERT';
+exports.REMOVE_ALERT = 'REMOVE_ALERT';
+exports.SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
+exports.SIGNUP_FAIL = 'SIGNUP_FAIL';
+exports.USER_LOADED = 'USER_LOADED';
+exports.AUTH_ERROR = 'AUTH_ERROR';
+exports.LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+exports.LOGIN_FAIL = 'LOGIN_FAIL';
+exports.LOGOUT = 'LOGOUT';
+exports.CLEAR_ERRORS = 'CLEAR_ERRORS';

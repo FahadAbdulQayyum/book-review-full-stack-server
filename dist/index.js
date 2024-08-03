@@ -16,6 +16,8 @@ app.use(cors({
     credentials: true,
 }));
 const PORT = process.env.PORT || 5000;
+// Serve the static files from the React app
+app.use(express.static(path_1.default.join(__dirname, 'dist/client')));
 // Define Routes here
 app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
@@ -25,6 +27,6 @@ app.use('/api/books', require('./routes/books'));
 // })
 // All other routes should serve the React app
 app.get('*', (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, 'client/dist', 'index.html'));
+    res.sendFile(path_1.default.join(__dirname, 'dist/client', 'index.html'));
 });
 app.listen(PORT, () => console.log(`listening on port:${PORT}`));
