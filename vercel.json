@@ -5,7 +5,7 @@
         "src": "index.ts",
         "use": "@vercel/node",
         "config":{
-          "includeFiles": ["dist/client/**", "dist/**/*.js", "dist/**/*.json"]
+          "includeFiles": ["dist/**/*.js", "dist/**/*.json"]
         }
       },
       {
@@ -18,8 +18,12 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/api/(.*)",
         "dest": "/dist/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/dist/client/$1"
       }
     ]
   }
