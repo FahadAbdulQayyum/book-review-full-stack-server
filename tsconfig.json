@@ -99,6 +99,11 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "./**/*.ts"
+    "./index.ts",
+    "./config/**/*.ts",
+    "./routes/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
