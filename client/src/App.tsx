@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react';
+import { Fragment } from 'react';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookState from './context/book/BookState';
@@ -12,7 +12,7 @@ import Alerts from './components/layout/Alerts';
 import AlertState from './context/alert/AlertState';
 import setAuthToken from './context/utils/setAuthToken';
 import PrivateRoute from './components/routing/PrivateRoute';
-import AuthContext from './context/auth/authContext';
+// import AuthContext from './context/auth/authContext';
 
 const App: React.FC = () => {
 
@@ -20,7 +20,7 @@ const App: React.FC = () => {
     setAuthToken(localStorage.token);
   };
 
-  const { isAuthenticated } = useContext(AuthContext)
+  // const { isAuthenticated } = useContext(AuthContext)
 
   return (
     <AuthState>

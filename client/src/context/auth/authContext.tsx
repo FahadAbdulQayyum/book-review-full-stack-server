@@ -37,8 +37,10 @@ const defaultContextValue: AuthState = {
     user: null,
     error: '',
     loadUser: () => { },
-    signup: (formData: formProps) => { },
-    login: (formData: formProps) => { },
+    // signup: (formData: formProps) => { },
+    // login: (formData: formProps) => { },
+    signup: () => { },
+    login: () => { },
     logout: () => { },
     clearErrors: () => { },
 };
