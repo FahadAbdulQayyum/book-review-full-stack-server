@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build":"tsc",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm install && npm run build",
+    "build:server": "tsc",
     "start": "node dist/index.js",
     "server": "nodemon index.ts",
     "client": "npm start --prefix client",

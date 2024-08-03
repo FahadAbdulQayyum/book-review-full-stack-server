@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 const express = require('express');
 const cors = require('cors');
+import path from 'path';
 const connectDB = require('./config/db')
 
 const app = express();
@@ -23,6 +24,11 @@ app.use('/api/books', require('./routes/books'))
 // app.get('/', (req: Request, res: Response) => {
 // res.json({success:true, message: 'Hope you doing well'})
 // })
+
+// All other routes should serve the React app
+app.get('*', (req: Request, res: Response) => {
+    res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+});
 
 
 app.listen(PORT, () => console.log(`listening on port:${PORT}`))
